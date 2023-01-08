@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TemplateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,8 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/','TemplateController@index');
+Route::get('/', 'App\Http\Controllers\TemplateController@index');
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
+
