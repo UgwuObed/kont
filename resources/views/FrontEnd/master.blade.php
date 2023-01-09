@@ -85,8 +85,7 @@
             <div class="col-lg-8 text-center text-lg-start">
               <h1 data-aos="fade-right">Konthub</h1>
               <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Take your business and career to the next level</p>
-              <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="{{route('register')}};
-" class="btn btn-outline-white">Join Now</a></p>
+              <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="{{ route('register') }}" class="btn btn-outline-white">Join Now</a></p>
             </div>
             <div class="col-lg-4 iphone-wrap">
               <img src="assets/img/group2.png" alt="Image" class="phone-1" data-aos="fade-right" width="000" height="500">

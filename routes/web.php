@@ -19,7 +19,5 @@ use App\Http\Controllers\TemplateController;
 });*/
 
 Route::get('/', 'App\Http\Controllers\TemplateController@index');
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
+
 

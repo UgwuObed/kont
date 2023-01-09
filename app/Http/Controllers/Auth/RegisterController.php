@@ -22,11 +22,11 @@ class RegisterController extends Controller
         ]);
 
         $user = User::create([
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'tiktok_username' => $request->tiktok_username,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
+            'first_name' => $validatedData['first_name'],
+            'last_name' => $validatedData['last_name'],
+            'tiktok_username' => $validatedData['tiktok_username'],
+            'email' => $validatedData['email'],
+            'password' => Hash::make($validatedData['password']),
         ]);
 
         // Login the user and redirect to the dashboard or home page
