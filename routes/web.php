@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +21,11 @@ use App\Http\Controllers\TemplateController;
 });*/
 
 Route::get('/', 'App\Http\Controllers\TemplateController@index');
+Route::view('register','auth.register');
+Route::post('store',[RegisterController::class,'store']);
+Route::view('homepage','homepage');
+
+Route::view('login','auth.login');
+Route::post('authenticate',[LoginController::class, 'authenticate']);
 
 

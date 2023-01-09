@@ -6,12 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\User as ModelsUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use App\User;
+use App\Models\User;
 
 
 class RegisterController extends Controller
 {
-    public function register(Request $request)
+    public function store(Request $request)
     {
         $validatedData = $request->validate([
             "first_name" => "required|string|max:255",
@@ -21,7 +21,7 @@ class RegisterController extends Controller
             "password" => "required|string|min:6|confirmed",
         ]);
 
-        $user = User::create([
+        $user = new User([
             'first_name' => $validatedData['first_name'],
             'last_name' => $validatedData['last_name'],
             'tiktok_username' => $validatedData['tiktok_username'],
@@ -29,6 +29,7 @@ class RegisterController extends Controller
             'password' => Hash::make($validatedData['password']),
         ]);
 
-        // Login the user and redirect to the dashboard or home page
+        Auth::login($user);
+        return redirect('/homepage');
     }
 }
