@@ -116,28 +116,43 @@
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <label for="name">First Name</label>
-                    <input type="text" name="first_name" class="form-control" id="first_name" required>
+                    <input type="text" name="first_name" class="form-control" id="first_name" value="{{ old('first_name') }}">
+                    @if($errors->has('first_name'))
+                      <span class="text-danger">{{ $errors->first('first_name') }}</span>
+                    @endif
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <label for="name">Last Name</label>
-                    <input type="text" class="form-control" name="last_name" id="last_name" required>
+                  <label for="name">Last Name</label>
+                    <input type="text" name="last_name" class="form-control" id="last_name" value="{{ old('last_name') }}">
+                    @if($errors->has('last_name'))
+                      <span class="text-danger">{{ $errors->first('last_name') }}</span>
+                    @endif
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <label for="name">TikTok Username</label>
-                    <input type="text" class="form-control" name="tiktok_username" id="tiktok_username" required>
+                    <input type="text" class="form-control" name="tiktok_username" value="{{ old('tiktok_username') }}" id="tiktok_username">
+                    @if($errors->has('tiktok_username'))
+                      <span class="text-danger">{{ $errors->first('tiktok_username') }}</span>
+                    @endif
                   </div>
                   <div class="col-md-12 form-group mt-3">
                     <label for="name">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
+                    <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}">
+                    @if($errors->has('email'))
+                      <span class="text-danger">{{ $errors->first('email') }}</span>
+                    @endif
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <label for="name">Password</label>
-                    <input type="password" class="form-control" name="password" id="password" required>
+                    <input type="password" class="form-control" name="password" id="password" value="{{ old('password') }}">
+                    @if($errors->has('password'))
+                      <span class="text-danger">{{ $errors->first('password') }}</span>
+                    @endif
                   </div>
 
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <label for="name">Comfirm Password</label>
-                    <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" required>
+                    <input type="password" class="form-control" name="password_confirmation" id="password_confirmation">
                   </div><br><hr>
                   <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-primary">Register</button>
