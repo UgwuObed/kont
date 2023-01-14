@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Register</title>
+  <title>Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,8 +50,8 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="{{ url('/home') }}">Home</a></li>
+          <li><a href="{{ url('/register') }}">Join Now</a></li>
          
                   
                 </ul>

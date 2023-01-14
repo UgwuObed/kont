@@ -21,6 +21,9 @@ use App\Http\Controllers\Auth\LoginController;
 });*/
 
 Route::get('/', 'App\Http\Controllers\TemplateController@index');
+Route::get('/home', function () {
+    return view('FrontEnd.home');
+});
 Route::view('register','auth.register');
 Route::post('store',[RegisterController::class,'store']);
 Route::view('homepage','homepage');
@@ -29,3 +32,15 @@ Route::view('login','auth.login');
 Route::post('authenticate',[LoginController::class, 'authenticate']);
 
 
+
+
+Route::group(['middleware' => ['authenticate']], function() {
+    
+    /**
+    * Verification Routes
+    */
+    Route::get('/email/verify', 'VerificationController@show')->name('verification.notice');
+    Route::get('/email/verify/{id}/{hash}', 'VerificationController@verify')->name('verification.verify')->middleware(['signed']);
+    Route::post('/email/resend', 'VerificationController@resend')->name('verification.resend');
+    
+});
