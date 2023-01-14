@@ -110,16 +110,22 @@
   
             <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
               <form method="POST" action="/authenticate">
+              @csrf
                 <div class="row">
                   <div class="col-md-6 form-group">
                   <div class="col-md-12 form-group mt-3">
                     <label for="name">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
+                    <input type="email" class="form-control" name="email" id="email" value="{{ old('email') }}">
+                    @if($errors->has('email'))
+                      <span class="text-danger">{{ $errors->first('email') }}</span>
+                    @endif
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
                     <label for="name">Password</label>
-                    <input type="password" class="form-control" name="password" id="password" required>
-                  </div>
+                    <input type="password" class="form-control" name="password" id="password" value="{{ old('password') }}">
+                    @if($errors->has('password'))
+                      <span class="text-danger">{{ $errors->first('password') }}</span>
+                    @endif
 
                   <br><hr>
                   <div class="col-md-6 form-group">
