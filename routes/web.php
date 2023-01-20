@@ -31,16 +31,7 @@ Route::view('homepage','homepage');
 Route::view('login','auth.login');
 Route::post('authenticate',[LoginController::class, 'authenticate']);
 
+Route::middleware(['auth'])->get('/userinfo', 'RegisterController@userinfo');
 
 
 
-Route::group(['middleware' => ['authenticate']], function() {
-    
-    /**
-    * Verification Routes
-    */
-    Route::get('/email/verify', 'VerificationController@show')->name('verification.notice');
-    Route::get('/email/verify/{id}/{hash}', 'VerificationController@verify')->name('verification.verify')->middleware(['signed']);
-    Route::post('/email/resend', 'VerificationController@resend')->name('verification.resend');
-    
-});
