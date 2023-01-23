@@ -131,7 +131,7 @@
                     @endif
                   </div>
                   <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <label for="name">TikTok Username</label>
+                    <label for="name">Username</label>
                     <input type="text" class="form-control" name="tiktok_username" value="{{ old('tiktok_username') }}" id="tiktok_username">
                     @if($errors->has('tiktok_username'))
                       <span class="text-danger">{{ $errors->first('tiktok_username') }}</span>

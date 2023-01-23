@@ -28,12 +28,7 @@
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
-  <!-- =======================================================
-  * Template Name: SoftLand - v4.9.1
-  * Template URL: https://bootstrapmade.com/softland-bootstrap-app-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
