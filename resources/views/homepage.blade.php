@@ -230,7 +230,9 @@
       </div>
       <div class="profile">
         <div class="info">
-          <p>Hey, <b>Ebuka</b></p>
+          <p>@if(Auth::check())
+      <b id="greeting">{{ Auth::user()->tiktok_username }}
+         @endif</b></p>
         </div>
         <div class="profile-photo">
           <img src="assets/img/Ellipse 1.png">
