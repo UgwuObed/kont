@@ -77,7 +77,9 @@
     </aside>
     <!---End of aside-->
     <main>
-      <h1 class="h1">Welcome</h1><br><br>
+      @if(Auth::check())
+      <h1 id="greeting">HI, {{ Auth::user()->tiktok_username }}! 😊</h1>
+     @endif
       <div class="insights">
         <div class="sales">
           <span class="material-icons-sharp">splitscreen</span>
