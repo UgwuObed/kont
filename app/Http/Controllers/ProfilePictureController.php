@@ -4,31 +4,41 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use App\Models\User;
 
 class ProfilePictureController extends Controller
 {
-    public function edit()
+    public function uploadProfilePicture(Request $request)
     {
-        return view('profile.edit-picture');
-    }
+        try {
+            // Validate the image file
+            $request->validate([
+                'profile_picture' => 'required|file|image|mimes:jpeg,png,jpg,gif,svg|max:2048|size:2048',
+            ]);
 
-    public function update(Request $request)
-    {
-        // Validate the uploaded file
-        $request->validate([
-            'picture' => 'required|file|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+            //Check if user is authenticated
+            if (!Auth::check()) {
+                return redirect()->back()->with('error', 'You must be logged in to perform this action');
+            }
+            // Delete existing profile picture if exists
+            $user = Auth::user();
+            if ($user->profile_picture) {
+                Storage::delete($user->profile_picture);
+            }
 
-        // Handle the uploaded file
-        $picture = $request->file('picture');
-        $fileName = time() . '.' . $picture->getClientOriginalExtension();
-        $picture->storeAs('public/profile_pictures', $fileName);
+            // Store the image file
+            $path = $request->file('profile_picture')->storeAs('public/profile_pictures', uniqid() . '.' . $request->file('profile_picture')->getClientOriginalExtension());
 
-        // Save the file path to the database
-        $user = Auth::user();
-        $user->profile_picture = $fileName;
-        $user->save();
+            // Update the user's record in the database
+            $user->profile_picture = $path;
+            $user->save();
 
-        return redirect()->back()->with('success', 'Profile picture updated successfully!');
+            // Return a redirect response
+            return redirect()->back()->with('success', 'Profile picture uploaded successfully');
+        } catch (\Exception $e) {
+            // Return an error response
+            return redirect()->back()->with('error', 'An error occurred while uploading the profile picture: ' . $e->getMessage());
+        }
     }
 }

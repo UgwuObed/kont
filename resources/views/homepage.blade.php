@@ -237,6 +237,7 @@
         <div class="profile-photo">
           <img src="assets/img/Ellipse 1.png">
         </div>
+        <br>
       </div>
     </div>
     <!--End of Top-->
