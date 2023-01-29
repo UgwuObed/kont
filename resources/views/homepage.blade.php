@@ -78,7 +78,7 @@
     <!---End of aside-->
     <main>
       @if(Auth::check())
-      <h1 id="greeting">HI, {{ Auth::user()->tiktok_username }}! 😊</h1>
+      <h1 id="greeting">Hello, {{ Auth::user()->tiktok_username }}! 😊</h1>
      @endif
       <div class="insights">
         <div class="sales">

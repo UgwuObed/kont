@@ -6,4 +6,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
 </form>
-<img src="{{ asset('storage/profile_pictures/' . $user->profile_picture) }}" alt="Profile Picture"
+<img src="{{ asset('storage/profile_pictures/' . $user->profile_picture) }}" alt="Profile Picture">
