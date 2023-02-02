@@ -141,76 +141,46 @@
       </div>
       <!--End Of Insights -->
       <div class="recent-orders">
-        <h2 class="h2">Content Link</h2>
+        <h2 class="h2">Trending Task</h2>
         <table>
           <thead>
             <tr>
-              <th>Social Media</th>
-              <th>Links</th>
-              <th>Task Code</th>
-              <th>Action</th>
-              <th>Status</th>
+              <th><h3 class="mmove">Name</h3></th>
+              <th><h3 class="mover">Hash Tags</h3></th>
+              <th><h3 class="movei">No.</h3></th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><img src="assets/img/3d-fluency-tiktok-logo.png" class="table-image"></td>
-              <td><input type="text" id="input-field" class="move-right" placeholder="TikTok" required></td>
-              <td><input type="text" id="input-field" class="move-rights" placeholder="Enter Code" required></td>
-              <form>
-                <td><input type="submit" value="Submit" class="btn"></td>
-              </form>
-              <td class="success">Status</td>
-              <td><a href="#">More</a></td>
+              <td><img src="assets/img/Darmy DC.jpg" class="table-image"></td>
+              <td><small class="move-right">Darmy DC Kashamadupe</small></td>
+              <td>#DarmyDC920</td>
+              <td></td>
+              <td>10,909</td>
             </tr>
             <!--End of tiktok link-->
             <tr>
-              <td><img src="assets/img/3d-plastilina-three-quarter-view-of-a-square-pink-instagram-logo.png"
-                  class="table-image"></td>
-              <td><input type="text" id="input-field" class="move-right" placeholder="Instagram" required></td>
-              <td><input type="text" id="input-field" class="move-rights" placeholder="Enter Code" required></td>
-              <form>
-                <td><input type="submit" value="Submit" class="btn"></td>
-              </form>
-              <td class="success">Status</td>
-              <td><a href="#">More</a></td>
+              <td><img src="assets/img/kdiv.jpg" class="table-image"></td>
+              <td><small class="move-right">Melodysongz x Kdiv</small></td>
+              <td>#DarmyDC920</td>
+              <td></td>
+              <td>10,909</td>
             </tr>
-            <!--End of instagram link-->
             <tr>
-              <br>
-              <td><img src="assets/img/3d-fluency-youtube-logo.png" class="table-image"></td>
-              <td><input type="text" id="input-field" class="move-right" placeholder="Youtube" required></td>
-              <td><input type="text" id="input-field" class="move-rights" placeholder="Enter Code" required></td>
-              <form>
-                <td><input type="submit" value="Submit" class="btn"></td>
-              </form>
-              <td class="success">Status</td>
-              <td><a href="#">More</a></td>
+              <td><img src="assets/img/kdiv.jpg" class="table-image"></td>
+              <td><small class="move-right">Melodysongz x Kdiv</small></td>
+              <td>#DarmyDC920</td>
+              <td></td>
+              <td>10,909</td>
             </tr>
-            <!--End of youtube link-->
             <tr>
-              <td><img src="assets/img/3d-plastilina-purple-square-facebook-logo.png" class="table-image"></td>
-              <td><input type="text" id="input-field" class="move-right" placeholder="Facebook" required></td>
-              <td><input type="text" id="input-field" class="move-rights" placeholder="Enter Code" required></td>
-              <form>
-                <td><input type="submit" value="Submit" class="btn"></td>
-              </form>
-              <td class="success">Status</td>
-              <td><a href="#">More</a></td>
+              <td><img src="assets/img/kdiv.jpg" class="table-image"></td>
+              <td><small class="move-right">Melodysongz x Kdiv</small></td>
+              <td>#DarmyDC920</td>
+              <td></td>
+              <td>10,909</td>
             </tr>
-            <!--End of facebook link-->
-            <tr>
-              <td><img src="assets/img/3d-fluency-link.png" class="table-image"></td>
-              <td><input type="text" id="input-field" class="move-right" placeholder="Web Link" required></td>
-              <td><input type="text" id="input-field" class="move-rights" placeholder="Enter Code" required></td>
-              <form>
-                <td><input type="submit" value="Submit" class="btn"></td>
-              </form>
-              <td class="success">Status</td>
-              <td><a href="#">More</a></td>
-            </tr>
-            <!--End of other link-->
           </tbody>
         </table>
         <!--End of table-->
