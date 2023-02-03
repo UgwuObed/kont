@@ -14,6 +14,7 @@
     --color-primary-variant: #570e9b;
     --color-dark-variant: #594070;
     --color-background: #f6f6f9;
+    --color-table: #696880;
 
 
     --card-border-radius: 2rem;
@@ -38,6 +39,7 @@
     --color-warning: #ffc42e;
     --color-light: rgba(0, 0, 0, 0.4);
     --box-shadow: 0 2rem 3rem var(--color-light);
+    --color-table: #C0C0C0;
 
 }
 
@@ -373,7 +375,7 @@ main .recent-orders table:hover {
 .move-right {
     position: relative;
     left: -59%;
-    color: var(--color-primary-variant);
+    color: var(--color-info-dark);
     font-size: 0.8rem;
 }
 
@@ -610,6 +612,38 @@ main .recent-orders a {
     main table tbody tr td:last-child {
         display: none;
     }
+
+    .move-right {
+    position: relative;
+    left: -59%;
+    color: var(--color-info-dark);
+    font-size: 13px;
+}
+
+.mover {
+    position: relative;
+    right: -82%;
+}
+
+.movei {
+    position: relative;
+    right: -30%;
+}
+
+.mmove {
+    position: relative;
+    right: 27%;
+}
+
+.table-image {
+    position: relative;
+    right: 20%;
+}
+
+    table thead tr th:nth-last-child(2) {
+  display: none;
+}
+
 }
 
 /*-------- Media queries for phone --------*/
@@ -730,16 +764,6 @@ main .recent-orders a {
         font-size: 2rem;
     }
 
-    main table thead tr th:last-child,
-    main table thead tr th:first-child {
-        display: none;
-    }
-
-    main table tbody td td:last-child,
-    main table tbody td td:first-child {
-        display: none;
-    }
-
     .close {
         position: absolute;
         right: 0.8rem;
@@ -754,81 +778,43 @@ main .recent-orders a {
     .h2 {
         position: absolute;
         right: 20rem;
-        top: -2.7%;
-    }
-
-    .table-image {
-        display: none;
-        width: 50px;
-        height: auto;
-        margin-left: -1.2rem;
-    }
-
-    .move-right, .move-rights, .btn {
-        width: 100%;
-      }
-    
-    .move-right {
-        position: relative;
-        left: -4.9rem;
-        padding: 10px;
-        border-radius: 9px;
-        width: 130%;
-        border: 1px solid var(--color-primary-variant);
-    }
-    .move-rights {
-        position: relative;
-        left: -1.5rem;
-        padding: 10px;
-        border-radius: 9px;
-        width: 100%;
-        border: 1px solid var(--color-primary-variant);
-    }
-    
-    .btn {
-        appearance: none;
-        -webkit-appearance: none;
-        padding: 10px;
-        border: none;
-        background-color: var(--color-info-dark);
-        color: #fff;
-        font-weight: 600;
-        border-radius: 5px;
-        width: 100%;
-        font-size: 0.7rem;
-        position: relative;
-        right: -1.2rem;
-    }
-
-    
-    main table tbody tr:last-child td {
-        border: none;
+        top: -6.7%;
     }
 
 
-    table tbody tr td:nth-child(6) {
-        display: none;
-    }
+
+.move-right {
+    position: relative;
+    left: -59%;
+    color: var(--color-info-dark);
+    font-size: 8px;
+}
+
+.mover {
+    position: relative;
+    right: -105%;
+}
+
+.movei {
+    position: relative;
+    right: -50%;
+}
+
+.mmove {
+    position: relative;
+    right: 27%;
+}
+
+.table-image {
+    position: relative;
+    right: 55%;
+}
 
     table thead tr th:nth-last-child(2) {
-        display: none;
-    }
+  display: none;
+}
 
-    table thead tr th:nth-last-child(3) {
-        position: absolute;
-        right: 5.3rem;
-    }
-
-    table thead tr th:nth-last-child(4) {
-        position: absolute;
-        right: 12.9rem;
-    }
-
-
-
-       
-        
-
+    
     
 }
 
