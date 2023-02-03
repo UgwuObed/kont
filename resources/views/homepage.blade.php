@@ -205,7 +205,9 @@
          @endif</b></p>
         </div>
         <div class="profile-photo">
-          <img src="assets/img/Ellipse 1.png">
+          <a href="{{ route('profile.update-picture') }}">
+          <img src="{{ asset('storage/profile_pictures/' . $user->profile_picture) }}" alt="Profile Picture">
+        </a>    
         </div>
         <br>
       </div>

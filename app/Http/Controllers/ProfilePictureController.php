@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 
 
+
 class ProfilePictureController extends Controller
 {
     public function uploadProfilePicture(Request $request)
@@ -22,6 +23,7 @@ class ProfilePictureController extends Controller
             if (!Auth::check()) {
                 return redirect()->back()->with('error', 'You must be logged in to perform this action');
             }
+
             // Delete existing profile picture if exists
             $user = Auth::user();
             if ($user->profile_picture) {
@@ -40,6 +42,32 @@ class ProfilePictureController extends Controller
         } catch (\Exception $e) {
             // Return an error response
             return redirect()->back()->with('error', 'An error occurred while uploading the profile picture: ' . $e->getMessage());
+        }
+    }
+
+    public function deleteProfilePicture(Request $request)
+    {
+        try {
+            //Check if user is authenticated
+            if (!Auth::check()) {
+                return redirect()->back()->with('error', 'You must be logged in to perform this action');
+            }
+
+            // Get the authenticated user
+            $user = Auth::user();
+
+            // Delete the profile picture if it exists
+            if ($user->profile_picture) {
+                Storage::delete($user->profile_picture);
+                $user->profile_ picture = null;
+                $user->save();
+            }
+
+            // Return a redirect response
+            return redirect()->back()->with('success', 'Profile picture deleted successfully');
+        } catch (\Exception $e) {
+            // Return an error response
+            return redirect()->back()->with('error', 'An error occurred while deleting the profile picture: ' . $e->getMessage());
         }
     }
 }

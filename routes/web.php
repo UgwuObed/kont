@@ -16,10 +16,6 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-/* Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', 'App\Http\Controllers\TemplateController@index');
 Route::get('/home', function () {
     return view('FrontEnd.home');
@@ -35,5 +31,6 @@ Route::middleware(['auth'])->get('/userinfo', 'RegisterController@userinfo');
 
 Route::get('/edit-profile-picture', 'ProfilePictureController@edit')->middleware('auth');
 Route::post('/update-profile-picture', 'ProfilePictureController@update')->name('profile.update-picture');
+Route::post('/profile/update-picture', 'ProfilePictureController@uploadProfilePicture')->name('profile.update-picture');
 
 
