@@ -10,11 +10,23 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 
 
+
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
 
+
+     /**
+         * Set the profile picture attribute
+         * 
+         * @param mixed $value
+         */
+        public function setProfilePictureAttribute($value)
+        {
+            $this->attributes['profile_picture'] = $value;
+        }
+        
     /**
      * The attributes that are mass assignable.
      *
