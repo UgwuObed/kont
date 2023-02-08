@@ -205,10 +205,14 @@
          @endif</b></p>
         </div>
         <div class="profile-photo">
-          <a href="{{ route('profile.update-picture') }}">
-          <img src="{{ asset('storage/profile_pictures/' . $user->profile_picture) }}" alt="Profile Picture">
-        </a>    
-        </div>
+        <a href="{{ route('profile.update-picture') }}">
+          @if (Auth::user() && Auth::user()->profile_picture)
+            <img src="{{ asset('storage/profile_pictures/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
+          @else
+            <img src="{{ asset('storage/default_profile_picture.jpg') }}" alt="Default Profile Picture">
+          @endif
+        </a>
+      </div>
         <br>
       </div>
     </div>

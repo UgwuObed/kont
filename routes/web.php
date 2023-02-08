@@ -29,8 +29,14 @@ Route::post('authenticate',[LoginController::class, 'authenticate']);
 
 Route::middleware(['auth'])->get('/userinfo', 'RegisterController@userinfo');
 
+
 Route::get('/edit-profile-picture', 'ProfilePictureController@edit')->middleware('auth');
-Route::post('/update-profile-picture', 'ProfilePictureController@update')->name('profile.update-picture');
-Route::post('/profile/update-picture', 'ProfilePictureController@uploadProfilePicture')->name('profile.update-picture');
+
+Route::middleware(['auth'])->group(function() {
+    Route::match(['get', 'post'], 'profile/update-picture', 'ProfilePictureController@updatePictureForm');
+    Route::post('/profile/update-picture', 'ProfileController@updatePicture')->name('profile.update-picture');
+  });
+  
+
 
 

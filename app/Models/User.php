@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Database\Eloquent\Model;
+
 
 
 
@@ -25,6 +25,11 @@ class User extends Authenticatable implements MustVerifyEmail
         public function setProfilePictureAttribute($value)
         {
             $this->attributes['profile_picture'] = $value;
+        }
+
+        public function getProfilePictureAttribute()
+        {
+            return $this->attributes['profile_picture']; 
         }
         
     /**

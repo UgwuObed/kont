@@ -6,14 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
-use App\AddProfilePictureToUsersTable;
-
-
-
 
 class ProfilePictureController extends Controller
 {
-    public function uploadProfilePicture(Request $request)
+    public function updatePictureForm()
+    {
+        return view('profile.update-picture');
+    }
+
+    public function updatePicture(Request $request)
     {
         try {
             // Validate the image file
@@ -61,7 +62,7 @@ class ProfilePictureController extends Controller
             // Delete the profile picture if it exists
             if ($user->profile_picture) {
                 Storage::delete($user->profile_picture);
-                $user->profile_ picture = null;
+                $user->profile_picture = null;
                 $user->save();
             }
 
