@@ -204,15 +204,18 @@
       <b id="greeting">{{ Auth::user()->tiktok_username }}
          @endif</b></p>
         </div>
-        <div class="profile-photo">
-        <a href="{{ route('profile.update-picture') }}">
-          @if (Auth::user() && Auth::user()->profile_picture)
-            <img src="{{ asset('storage/profile_pictures/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
-          @else
-            <img src="{{ asset('storage/default_profile_picture.jpg') }}" alt="Default Profile Picture">
-          @endif
-        </a>
-      </div>
+    <div class="profile-photo">
+      <a href="{{ route('profile.update-picture') }}">
+        <form action="{{ route('profile.update-picture') }}" method="post">
+        @if (Auth::user() && Auth::user()->profile_picture)
+          <img src="{{ asset('storage/profile_pictures/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
+        @else
+          <img src="{{ asset('storage/default_profile_picture.jpg') }}" alt="Default Profile Picture">
+        @endif
+              <input type="submit" value="Update Picture">
+    </form>
+      </a>
+    </div>
         <br>
       </div>
     </div>

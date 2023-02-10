@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
   <div class="container">
     <div class="row">
       <div class="col-md-8 offset-md-2">
@@ -9,12 +6,12 @@
             Update Profile Picture
           </div>
           <div class="card-body">
-            <form action="{{ route('profile.update-picture') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('profile.update-picture') }}" method="Post" enctype="multipart/form-data">
               @csrf
               <div class="form-group">
                 <label for="profile_picture">Profile Picture</label>
                 <input type="file" name="profile_picture" id="profile_picture" class="form-control-file @error('profile_picture') is-invalid @enderror">
-                @error('profile_ picture')
+                @error('profile_picture')
                   <div class="invalid-feedback">
                     {{ $message }}
                   </div>
@@ -27,4 +24,3 @@
       </div>
     </div>
   </div>
-@endsection
