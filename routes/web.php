@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,9 @@ Route::get('/home', function () {
 });
 Route::view('register','auth.register');
 Route::post('store',[RegisterController::class,'store']);
-Route::view('homepage','homepage');
+Route::middleware(['auth'])->group(function () {
+    Route::view('homepage', 'homepage');
+});
 
 Route::view('login','auth.login');
 Route::post('authenticate',[LoginController::class, 'authenticate']);
@@ -31,11 +35,12 @@ Route::middleware(['auth'])->get('/userinfo', 'RegisterController@userinfo');
 
 
 
-Route::middleware(['auth'])->group(function() {
-    Route::match(['get', 'post'], 'profile/update-picture', 'ProfilePictureController@updatePictureForm');
-    Route::post('/profile/update-picture', 'ProfileController@updatePicture')->name('profile.update-picture');
 
-  });
+
+
+Route::middleware(['auth'])->post('/profile/update-picture', [ProfileController::class, 'updatePicture'])->name('profile.update-picture');
+
+
   
 
 

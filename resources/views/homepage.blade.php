@@ -204,18 +204,36 @@
       <b id="greeting">{{ Auth::user()->tiktok_username }}
          @endif</b></p>
         </div>
-    <div class="profile-photo">
-      <a href="{{ route('profile.update-picture') }}">
-        <form action="{{ route('profile.update-picture') }}" method="post">
-        @if (Auth::user() && Auth::user()->profile_picture)
-          <img src="{{ asset('storage/profile_pictures/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
-        @else
-          <img src="{{ asset('storage/default_profile_picture.jpg') }}" alt="Default Profile Picture">
-        @endif
-              <input type="submit" value="Update Picture">
-    </form>
-      </a>
-    </div>
+        <div class="profile-photo">
+  <form id="update-profile-picture-form" action="{{ route('profile.update-picture') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <label for="profile-picture-input">
+      @if (Auth::user() && Auth::user()->profile_picture)
+        <img id="profile-picture" src="{{ asset('storage/profile_pictures/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
+      @else
+      <img id="profile-picture" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Default Profile Picture">   
+         @endif
+    </label>
+    <input id="profile-picture-input" type="file" name="profile_picture" accept="image/*" style="display:none;">
+    <input type="submit" value="Update Picture" style="display:none;">
+  </form>
+</div>
+
+<script>
+  const profilePictureInput = document.getElementById('profile-picture-input');
+  const updateProfilePictureForm = document.getElementById('update-profile-picture-form');
+
+  // Trigger the file input field when the user clicks the profile picture
+  document.getElementById('profile-picture').addEventListener('click', function() {
+    profilePictureInput.click();
+  });
+
+  // Submit the form when the user selects a file
+  profilePictureInput.addEventListener('change', function() {
+    updateProfilePictureForm.submit();
+  });
+</script>
+
         <br>
       </div>
     </div>
