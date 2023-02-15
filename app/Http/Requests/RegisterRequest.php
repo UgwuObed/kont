@@ -36,9 +36,9 @@ class RegisterRequest extends FormRequest
         return [
             'first_name.required'=> 'First name can not be empty',
             'last_name.required'=> 'Last name can not be empty',
-            'tiktok_username.required' => 'TikTok username is required.',
-            'tiktok_username.unique' => 'TikTok username already in use',
-            'tiktok_username.alpha_dash' => 'TikTok username can only contain letters, numbers, dashes and underscores.',
+            'tiktok_username.required' => 'Username is required.',
+            'tiktok_username.unique' => 'Username already in use',
+            'tiktok_username.alpha_dash' => 'Username can only contain letters, numbers, dashes and underscores.',
             'email.required' => 'Email is required.',
             'email.unique' => 'Email is already taken.',
             'email.email' => 'Email must be valid.',

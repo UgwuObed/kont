@@ -26,4 +26,4 @@ class LoginController extends Controller
             return back()->withErrors(['Incorrect Details']);
         }
     }
-}
+} 

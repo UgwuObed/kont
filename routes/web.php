@@ -40,6 +40,12 @@ Route::middleware(['auth'])->get('/userinfo', 'RegisterController@userinfo');
 
 Route::middleware(['auth'])->post('/profile/update-picture', [ProfileController::class, 'updatePicture'])->name('profile.update-picture');
 
+// Email verification routes
+Route::get('/verify-email', [VerificationController::class, 'notice'])->name('verification.notice');
+Route::get('/verify-email/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
+Route::post('/email/verification-notification', [VerificationController::class, 'resend'])->name('verification.send');
+
+
 
   
 

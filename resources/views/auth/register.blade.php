@@ -31,12 +31,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-  <!-- =======================================================
-  * Template Name: SoftLand - v4.9.1
-  * Template URL: https://bootstrapmade.com/softland-bootstrap-app-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -156,6 +151,13 @@
                     <label for="name">Comfirm Password</label>
                     <input type="password" class="form-control" name="password_confirmation" id="password_confirmation">
                   </div><br><hr>
+                  <p>Already part of us? <a href="{{ url('/login') }}" style="color:dodgerblue">Sign In</a>.</p>
+                  <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
                   <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-primary">Register</button>
                     @csrf

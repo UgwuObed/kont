@@ -31,12 +31,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-  <!-- =======================================================
-  * Template Name: SoftLand - v4.9.1
-  * Template URL: https://bootstrapmade.com/softland-bootstrap-app-landing-page-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
 </head>
 
 <body>
@@ -129,7 +124,7 @@
                     @if($errors->has('password'))
                       <span class="text-danger">{{ $errors->first('password') }}</span>
                     @endif
-
+                    <p> <a href="{{ url('/login') }}" style="color:dodgerblue">Forget Password?</a>.</p>
                   <br><hr>
                   <div class="col-md-6 form-group">
                     <button type="submit" class="btn btn-primary">Login</button>

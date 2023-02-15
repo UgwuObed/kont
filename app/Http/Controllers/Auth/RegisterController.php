@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use App\Mail\VerifyEmail;
+use Illuminate\Support\Facades\Mail;
 
 use App\Http\Controllers\Controller;
 use App\Models\User as ModelsUser;
@@ -9,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\RegisterRequest;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 
 
@@ -32,7 +35,32 @@ class RegisterController extends Controller
             'password' => Hash::make($validatedData['password']),
         ]);
 
-        Auth::login($user);
+        // Send verification email
+        Mail::to($user)->send(new VerifyEmail($user));
+
+        // Redirect the user to a page informing them to check their email
+        return redirect('/verify-email');
+    }
+}
+
+class VerificationController extends Controller
+{
+    public function notice()
+    {
+        return view('auth.verify-email');
+    }
+
+    public function verify(EmailVerificationRequest $request)
+    {
+        $request->fulfill();
+
         return redirect('/homepage');
+    }
+
+    public function resend(Request $request)
+    {
+        $request->user()->sendEmailVerificationNotification();
+
+        return back()->with('success', 'Verification link sent!');
     }
 }
