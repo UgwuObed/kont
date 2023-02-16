@@ -37,7 +37,7 @@
           <span class="material-icons-sharp">home</span>
           <h3>Home</h3>
         </a>
-        <a href="">
+        <a href="{{ url('/profile') }}">
           <span class="material-icons-sharp">
             person
           </span>
