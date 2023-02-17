@@ -50,6 +50,10 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 
+Route::get('/task', function () {
+    return view('task');
+});
+
 
 
 

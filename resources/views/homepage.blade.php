@@ -43,7 +43,7 @@
           </span>
           <h3>Profile</h3>
         </a>
-        <a href="">
+        <a href="{{ url('/task') }}">
           <span class="material-icons-sharp">
             splitscreen
           </span>

@@ -42,3 +42,16 @@ body {
     cursor: pointer;
     border: solid 1px #BA68C8
 }
+
+.bck {
+  background-color: #570e9b;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  margin-left: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 5px;
+}

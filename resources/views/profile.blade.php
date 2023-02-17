@@ -24,8 +24,14 @@
 </head>
 
 <body>
+
+
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
+            <div class="mt-5 text-left">
+  <button class="bck" type="button" onclick="window.location.href='{{ url('/homepage') }}'">Back</button>
+</div>
+
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px"  @if (Auth::user() && Auth::user()->profile_picture)
         <img id="profile-picture" src="{{ asset('storage/profile_pictures/' . Auth::user()->profile_picture) }}" alt="Profile Picture">
