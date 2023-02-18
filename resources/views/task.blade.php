@@ -32,16 +32,16 @@
                         <div class="list-wrapper">
                             <ul class="d-flex flex-column-reverse todo-list">
                                 <li>
-                                    <div> <label class="form-check-label">For what reason would it be advisable. <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
+                                    <div> <label class="form-check-label">Kdiv | Gratitude #gra230 <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
                                 </li>
                                 <li class="completed">
-                                    <div> <label>For what reason would it be advisable for me to think. <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
+                                    <div> <label>Mboy | Today #tod531 <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
                                 </li>
                                 <li>
-                                    <div>Is it be advisable for me to think about business content? <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
+                                    <div>Ychinz | Lover #lov531 <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
                                 </li>
                                 <li>
-                                    <div> Print Statements all <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
+                                    <div>Emmycent | Baby #bab403 <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>
                                 </li>
                                 <li>
                                     <div> Print bills <i class="input-helper"></i></label> </div> <i class="remove mdi mdi-close-circle-outline"></i>

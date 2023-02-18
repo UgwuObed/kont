@@ -49,19 +49,19 @@
           </span>
           <h3>Task</h3>
         </a>
-        <a href="">
+        <a href="{{ url('/completed') }}">
           <span class="material-icons-sharp">
             task
           </span>
           <h3>Completed</h3>
         </a>
-        <a href="">
+        <a href="{{ url('/message') }}">
           <span class="material-icons-sharp">
             mark_email_unread
           </span>
           <h3>Message</h3>
         </a>
-        <a href="">
+        <a href="{{ url('/wallet') }}">
           <span class="material-icons-sharp">
             account_balance_wallet
           </span>

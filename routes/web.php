@@ -53,6 +53,18 @@ Route::get('/homepage', function () {
 Route::get('/task', function () {
     return view('task');
 });
+Route::get('/completed', function () {
+    return view('completed');
+});
+Route::get('/message', function () {
+    return view('message');
+});
+Route::get('/wallet', function () {
+    return view('wallet');
+});
+
+
+
 
 
 
