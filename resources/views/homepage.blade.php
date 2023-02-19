@@ -25,7 +25,8 @@
     <aside>
       <div class="top">
         <div class="logo">
-          <img src="assets/img/favicon.png" alt="logo">
+          <img src="assets/img/logo1.png" alt="logo" class="logg" width="100" height="100">
+
         </div>
         <div class="close" id="close-btn">
           <span class="material-icons-sharp">close</span>
@@ -194,10 +195,8 @@
       <button id="menu-btn">
         <span class="material-icons-sharp">menu</span>
       </button>
-      <div class="theme-toggler">
-        <span class="material-icons-sharp active">light_mode</span>
-        <span class="material-icons-sharp">dark_mode</span>
-      </div>
+     
+    
       <div class="profile">
         <div class="info">
           <p>@if(Auth::check())
@@ -217,6 +216,7 @@
     <input id="profile-picture-input" type="file" name="profile_picture" accept="image/*" style="display:none;">
     <input type="submit" value="Update Picture" style="display:none;">
   </form>
+
 </div>
 
 <script>

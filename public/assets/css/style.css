@@ -1,9 +1,4 @@
-/**
-* Template Name: SoftLand - v4.9.1
-* Template URL: https://bootstrapmade.com/softland-bootstrap-app-landing-page-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -168,7 +163,11 @@ section {
 }
 
 .feature-1 p {
-  color: #b1b1b1;
+  color: #343434;
+}
+
+h1 .ben{
+  text-align: center;
 }
 
 /* Step */
@@ -936,8 +935,9 @@ section {
   width: 800px;
   height: 600px;
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 0;
+  margin-top: 30px;
   }
   
 
@@ -1033,3 +1033,59 @@ section {
 .social a i {
   line-height: 0;
 }
+
+p{
+  color: #343434;
+}
+
+p .bl{
+  color: #343434;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 999;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+  .navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 33px;
+  }
+  .navbar.active {
+    transform: translateX(0);
+  }
+  .navbar ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .navbar li {
+    margin: 20px 0;
+  }
+  .navbar a {
+    font-size: 19px;
+  }
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 32px;
+    cursor: pointer;
+  }
+}
+

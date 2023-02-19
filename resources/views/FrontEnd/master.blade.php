@@ -15,6 +15,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
 <link rel="manifest" href="assets/img/site.webmanifest">
 
+
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -27,6 +29,8 @@
 
   <!-- Template Main CSS File -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 
 
 </head>
@@ -45,21 +49,34 @@
       </div>
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="{{ url('/login') }}">Sign In</a></li>
-         
-                  
-                </ul>
-              </li>
-            
-          </li>
-          
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+  <ul>
+    <li><a href="{{ url('/register') }}">Create Account</a></li>
+    <li><a href="{{ url('/login') }}">Sign In</a></li>
+    <li class="dropdown">
+      <a href="#" class="">For Brands</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Brand 1</a></li>
+        <li><a href="#">Brand 2</a></li>
+        <li><a href="#">Brand 3</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="">Payments</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Payment Option 1</a></li>
+        <li><a href="#">Payment Option 2</a></li>
+        <li><a href="#">Payment Option 3</a></li>
+      </ul>
+    </li>
+  </ul>
+  <i class="bi bi-list mobile-nav-toggle"></i>
+</nav>
+
+      <!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section class="hero-section" id="hero">
@@ -82,11 +99,12 @@
           <div class="row">
             <div class="col-lg-8 text-center text-lg-start">
               <h1 data-aos="fade-right">Konthub</h1>
-              <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Take your business and career to the next level</p>
+              <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Welcome to Konthub, the platform that connects content creators <br>with brands!</p>
               <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="{{ url('/register') }}" class="btn btn-outline-white">Join Now</a></p>
             </div>
+
             <div class="col-lg-4 col-md-6 col-sm-12 iphone-wrap">
-              <img src="assets/img/front.png" alt="Image" class="phone-1" data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500">
+              <img src="assets/img/front.png" alt="Image" class="phone-1" data-aos="fade-right" data-aos-delay="200" data-aos-offset="-700">
               <br><br>
   
             </div>
@@ -105,7 +123,8 @@
 
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-5" data-aos="fade-up">
-            <h2 class="section-heading">About Us?</h2>
+            <h2 class="section-heading">Monetize Your Skills</h2>
+            <p>Are you a content creator looking to monetize your skills and expand your reach? Do you want to help musical artists/brands get their songs heard by a wider audience? Konthub is the solution you’ve been looking for!</p>
           </div>
         </div>
 
@@ -115,8 +134,8 @@
               <div class="wrap-icon icon-1">
                 <i class="bi bi-people"></i>
               </div>
-              <h3 class="mb-3">Register</h3>
-              <p>We let content creators sign up and create a profile</p>
+              <h3 class="mb-3">Sign up</h3>
+              <p class="bl">Sign up and create your profile</p>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
@@ -124,8 +143,8 @@
               <div class="wrap-icon icon-1">
                 <i class="bi bi-brightness-high"></i>
               </div>
-              <h3 class="mb-3">Connect</h3>
-              <p>Content creators connects with brands/products</p>
+              <h3 class="mb-3">Get Tasks</h3>
+              <p>Browse through for available projects and choose the ones that interest you</p>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
@@ -133,8 +152,8 @@
               <div class="wrap-icon icon-1">
                 <i class="bi bi-bar-chart"></i>
               </div>
-              <h3 class="mb-3">Create Connect</h3>
-              <p>Create contents for brands and get paid</p>
+              <h3 class="mb-3">Create Conents</h3>
+              <p>Create engaging content that showcases the brands and upload it on your social media platforms and get paid for your work once the project is completed</p>
             </div>
           </div>
         </div>
@@ -150,31 +169,51 @@
             <img src="assets/img/3d.png" width="350" height="200" alt="Image" class="img-fluid">
           </div>
         </div>
-
+        <h2 class="section-heading">Benefits:</h2>
         <div class="row">
           <div class="col-md-4">
             <div class="step">
               <span class="number">01</span>
-              <h3>Sign Up</h3>
-              
+              <h3>Earn</h3>
+              <p>Earn money while doing what you love</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="step">
               <span class="number">02</span>
-              <h3>Create Profile</h3>
-              
+              <h3>Grow Audience</h3>
+              <p>Expand your reach and grow your audience</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="step">
               <span class="number">03</span>
-              <h3>Ease Of Business</h3>
-              
+              <h3>Show creativity</h3>
+              <p>Collaborate with brands/musical artists and showcase your creativity</p>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="step">
+              <span class="number">04</span>
+              <h3>Build Portfolio</h3>
+              <p>Build your portfolio with high-quality content</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="step">
+              <span class="number">05</span>
+              <h3>Join Community</h3>
+              <p>Be part of a community of content creators and musical artists</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
     </section>
 
@@ -184,7 +223,7 @@
           <div class="col-md-4 me-auto">
             <h2 class="mb-4">Seamlessly Communicate</h2>
             <p class="mb-4">At Konthub we believe in the power of seamless communication to bring businesses and content creators together and create great content. That's why we've designed our platform to make it easy for you to connect and collaborate with your clients or partners.</p>
-            <p><a href="register.html" class="btn btn-primary">Join Now</a></p>
+            <p><a href="{{ url('/register') }}" class="btn btn-primary">Join Now</a></p>
           </div>
           <div class="col-md-6" data-aos="fade-left">
             <img src="assets/img/3d2.png" width="350" height="200"  alt="Image" class="img-fluid">
@@ -199,10 +238,26 @@
           <div class="col-md-4 ms-auto order-2">
             <h2 class="mb-4">Gather Feedback</h2>
             <p class="mb-4">At Konthub, we value the opinions and feedback of our users. Whether you're a business or a content creator, your input is important to us. That's why we have multiple ways for you to share your thoughts and ideas with us.</p>
-            <p><a href="register.html" class="btn btn-primary">Join Now</a></p>
+            <p><a href="{{ url('/register') }}" class="btn btn-primary">Join Now</a></p>
           </div>
           <div class="col-md-6" data-aos="fade-right">
             <img src="assets/img/3d3.png" width="350" height="200"  alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+        <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 me-auto">
+            <h2 class="mb-4">Earn To Create</h2>
+            <p class="mb-4">Don’t let your creativity go to waste! Sign up with konthub today and start earning money for your content creation skills. With our platform, you’ll have the opportunity to work with some of the biggest names in the music industry and showcase your talent to the world. Let’s make some magic together!.</p>
+            <p><a href="{{ url('/register') }}" class="btn btn-primary">Join Now</a></p>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <img src="assets/img/3d-young.png" width="350" height="200"  alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -352,7 +407,7 @@
 
       <div class="row justify-content-center text-center">
         <div class="col-md-7">
-          <p class="copyright">&copy; Copyright Konthub. All Rights Reserved</p>
+          <p class="copyright">&copy; Copyright Konthub. All Rights Reserved 2023</p>
           <div class="credits">
             <!--
             All the links in the footer should remain intact.
